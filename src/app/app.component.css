@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header & Navbar */
+header {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* nav image */
+
+.heart img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+.search img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+.shop img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 4.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-icons img {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.nav-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Added - vertically centers content */
+  max-width: 1400px; /* Changed from 100% to match navbar width */
+  min-height: 500px; /* Increased from 350px for better proportions */
+  padding: 4rem 3rem;
+  background-image: url("/assets/image/MBanner.png");
+  background-size: auto 90%; /* Adjusted size */
+  background-position: right center; /* FIXED - was just center */
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hero-content {
+  max-width: 600px; /* Reduced to give space for the image */
+  z-index: 1; /* Ensures text appears above background */
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+}
+
+.cta-button {
+  background-color: #ecedee;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  color: #fff; /* Added white text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    background-position: center bottom;
+    background-size: auto 50%;
+  }
+
+  .hero-content {
+    text-align: left; /* Changed from right */
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Increased from 2rem */
+  }
+
+  .hero-content p {
+    white-space: normal; /* Allow wrapping on mobile */
+  }
+}
